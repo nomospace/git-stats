@@ -1,0 +1,6 @@
+*.class
+*.war
+*.ear
+*.db
+.idea
+*.iml
