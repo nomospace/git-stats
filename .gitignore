@@ -4,3 +4,4 @@
 *.db
 .idea
 *.iml
+node_modules

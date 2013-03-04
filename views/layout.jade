@@ -1,0 +1,26 @@
+!!!
+html
+  include include/header
+  body
+    div.navbar.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          a(data-toggle='collapse', data-target='.nav-collapse').btn.btn-navbar
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href='/').brand #{brand}
+          ul.nav
+            - var obj = {'general':'General','activity':'Activity','authors':'Authors','files':'Files','lines':'Lines','tags':'Tags','about':'About'}
+              - each val, key in obj
+                - if (id == key)
+                  li.active
+                    a(href='#{key}') #{val}
+                - else
+                  li
+                    a(href='#{key}') #{val}
+    div.container
+      block content
+      include include/footer
+  include include/scripts
+
